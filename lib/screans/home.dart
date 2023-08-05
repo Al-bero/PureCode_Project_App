@@ -5,12 +5,24 @@ import 'package:flutter/material.dart';
 import 'package:pc_pro/screans/services.dart';
 import 'package:pc_pro/screans/work.dart';
 
-class Home extends StatelessWidget {
+class Home extends StatefulWidget {
   const Home({super.key});
 
   @override
+  State<Home> createState() => _HomeState();
+}
+
+class _HomeState extends State<Home> {
+  int index = 2;
+  final screans = [
+    Home(),
+    Service(),
+  ];
+  @override
   Widget build(BuildContext context) {
     return Scaffold(
+      //extendBody =help to make the images fit with navegation bar
+      extendBody: true,
 //the header of app
       appBar: AppBar(
         backgroundColor: Colors.white,
@@ -155,9 +167,10 @@ class Home extends StatelessWidget {
       ),
 
 //the Footer of app
+
       backgroundColor: Colors.white,
       bottomNavigationBar: CurvedNavigationBar(
-        backgroundColor: Colors.white,
+        backgroundColor: Colors.transparent,
         color: const Color(0xff333E50),
         items: <Widget>[
           GestureDetector(

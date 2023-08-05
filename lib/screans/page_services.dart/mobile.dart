@@ -1,6 +1,7 @@
 import 'package:curved_navigation_bar/curved_navigation_bar.dart';
 import 'package:flutter/material.dart';
 import 'package:pc_pro/screans/home.dart';
+import 'package:pc_pro/screans/order.dart';
 
 import '../services.dart';
 import '../work.dart';
@@ -179,13 +180,21 @@ class Mobile extends StatelessWidget {
                             blurRadius: 8,
                             offset: Offset(-0, 4))
                       ]),
-                  child: const Center(
-                    child: Text(
-                      'ORDER',
-                      style: TextStyle(
-                          color: Color(0xff2C607D),
-                          fontSize: 12,
-                          fontWeight: FontWeight.bold),
+                  child: InkWell(
+                    onTap: () {
+                      Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                              builder: (context) => const Order()));
+                    },
+                    child: const Center(
+                      child: Text(
+                        'ORDER',
+                        style: TextStyle(
+                            color: Color(0xff2C607D),
+                            fontSize: 12,
+                            fontWeight: FontWeight.bold),
+                      ),
                     ),
                   ),
                 ),

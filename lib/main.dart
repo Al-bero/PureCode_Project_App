@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:pc_pro/screans/home.dart';
+import 'package:pc_pro/screans/order.dart';
 import 'package:pc_pro/screans/services.dart';
 
 void main() {
@@ -19,7 +20,9 @@ class MyApp extends StatelessWidget {
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
         useMaterial3: true,
       ),
-      home: const Services(),
+      home: const Order(),
+
+      //home: const Services(),
       // home: const Home(),
     );
   }
