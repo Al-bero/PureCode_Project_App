@@ -113,13 +113,13 @@ class _HomeState extends State<Home> {
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
                 Container(
-                  margin: const EdgeInsets.all(35),
+                  margin: const EdgeInsets.all(30),
                   width: 338,
                   height: 259,
                   padding: const EdgeInsets.all(20),
                   decoration: BoxDecoration(
                       color: const Color(0xff333E50),
-                      borderRadius: BorderRadius.circular(10)),
+                      borderRadius: BorderRadius.circular(130)),
                   child: const Center(
                       child: Text(
                           'About\nPureCode is a Saudi company, Specialized in providing software solutions for business and services, producing advanced software as customers’ request and aspiration.',
@@ -136,7 +136,7 @@ class _HomeState extends State<Home> {
                   padding: const EdgeInsets.all(10),
                   decoration: BoxDecoration(
                       color: const Color(0xff333E50),
-                      borderRadius: BorderRadius.circular(10)),
+                      borderRadius: BorderRadius.circular(130)),
                   child: const Center(
                       child: Text(
                           'Mission\nBe a major company at middle east at business solutions',
@@ -150,7 +150,7 @@ class _HomeState extends State<Home> {
                   padding: const EdgeInsets.all(10),
                   decoration: BoxDecoration(
                       color: const Color(0xff333E50),
-                      borderRadius: BorderRadius.circular(10)),
+                      borderRadius: BorderRadius.circular(130)),
                   child: const Center(
                       child: Text(
                           'Vision\nLeader in web design and programming solutions and systems globally.',
@@ -163,6 +163,10 @@ class _HomeState extends State<Home> {
               ],
             ),
           ),
+          Row(
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: [Indicator(), Indicator(), Indicator()],
+          ),
         ],
       ),
 
@@ -170,6 +174,7 @@ class _HomeState extends State<Home> {
 
       backgroundColor: Colors.white,
       bottomNavigationBar: CurvedNavigationBar(
+        height: 58,
         backgroundColor: Colors.transparent,
         color: const Color(0xff333E50),
         items: <Widget>[
@@ -222,6 +227,25 @@ class _HomeState extends State<Home> {
             ),
           ),
         ],
+      ),
+    );
+  }
+}
+
+class Indicator extends StatelessWidget {
+  const Indicator({
+    super.key,
+  });
+
+  @override
+  Widget build(BuildContext context) {
+    return Container(
+      width: 8.0,
+      height: 8.0,
+      margin: EdgeInsets.only(bottom: 10),
+      decoration: BoxDecoration(
+        color: Colors.grey,
+        borderRadius: BorderRadius.circular(8.0),
       ),
     );
   }

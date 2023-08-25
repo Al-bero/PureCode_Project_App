@@ -20,9 +20,9 @@ class MyApp extends StatelessWidget {
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
         useMaterial3: true,
       ),
-      home: const Order(),
+      //home: const Order(),
 
-      //home: const Services(),
+      home: const Services(),
       // home: const Home(),
     );
   }
